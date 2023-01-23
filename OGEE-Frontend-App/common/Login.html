@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OGEE Diary Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/OGEE.css"/>
+
+    <!-- icons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+<!------------ Sign in ---------------->
+<section class="login forms">
+    <div class="form signin">
+        <div class="content">
+            <header>Signin</header>
+
+            <form method="get" id="login-form">
+                <div class="inputs">
+                    <input id="loginEmail" type="email" placeholder="Your Email" class="input" >
+                </div>
+                <div class="inputs">
+                    <input type="password" id="loginPassword" placeholder="Your Password" class="password">
+                    <i class='bx bx-hide eye-icon '></i>
+                </div>
+                <div class="link forgot-pass">
+                    <a href="#" class="forgot-pass">Forgot Passowrd?</a>
+                </div>
+                <div class="inputs button">
+                    <button id="btnLogin" type="button">Login</button>
+                </div>
+                <div class="link signup">
+                    <span>Already haven't an account?<a href="#" class="elink signup-link">Signup</a></span>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <!------------ Sign up ---------------->
+
+    <div class="form signup">
+        <div class="form-content">
+            <header>Sign up</header>
+            <form method="post" id="signup-form">
+                <div class="inputs">
+                    <input type="email" placeholder="Your Email" class="input" id="signUpEmail" name="email">
+                </div>
+                <div class="inputs">
+                    <input type="text" placeholder="user name" class="input" id="signUpUsername" name="username">
+
+                </div>
+                <div class="inputs">
+                    <input type="password" placeholder="New Password" name="password" class="password"
+                           id="signUpPassword">
+                    <i class='bx bx-hide eye-icon '></i>
+                </div>
+
+                <div class="inputs button">
+                    <button id="btnSignUp" type="button">Signup</button>
+                </div>
+                <div class="link-signin">
+                    <span>Already have an account?<a href="#" class="elink log-link">Signin</a></span>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+<script src="../js/jquery-3.6.0.js"></script>
+<script src="../js/controller/UserController.js"></script>
+<script src="../js/OGEE.js"></script>
+</body>
+</html>

@@ -1,2 +1,1 @@
-# Fullstack_Project
-OGEE DIARY
+# OGEE APPLICATION
