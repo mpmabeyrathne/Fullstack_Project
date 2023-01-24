@@ -18,7 +18,10 @@ const UserSchema = new Schema({
     personalMemories: [{
         type: Schema.Types.ObjectId,
         ref: 'Memory',
-    }]
+    }],
+    socketId: {
+        type: String,
+    }
 });
 
 module.exports = model('User', UserSchema);

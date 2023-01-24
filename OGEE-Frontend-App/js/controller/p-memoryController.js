@@ -1,4 +1,3 @@
-
 $('#createMemoryBtn').click(function (event) {
     event.preventDefault();
     CreatePost();
@@ -36,6 +35,5 @@ $('#createMemoryBtn').click(function (event) {
             }
         });
     }
-
 });
 
