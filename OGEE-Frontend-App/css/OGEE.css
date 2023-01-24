@@ -545,6 +545,17 @@ main .container .left .profile {
     font-size: 16px;
     resize: none;
   }
+
+  #postUserName {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+  }
   
   /* Style the file inputs */
   #post-image, #post-video {
@@ -754,6 +765,16 @@ main .container .left .profile {
       
     
 }
+.grouppostcss {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+  }
 /*group style*/
 main .container .right {
     height: max-content;

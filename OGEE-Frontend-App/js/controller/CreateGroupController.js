@@ -1,5 +1,6 @@
 
 $('#GroupBtn').click(function (event) {
+   
     event.preventDefault();
     groupCreate();
 function groupCreate(){
@@ -7,7 +8,7 @@ function groupCreate(){
     let groupDescription = $('#group-description').val();
     let groupPicture = $('#group-picture')[0].files[0];
     let groupMembersEmails = [];
-    $('#group-member-email').each(function () {
+    $('.center-placeholder1').each(function () {
         if ($(this).val() !== '') {
             groupMembersEmails.push($(this).val());
         }
@@ -43,5 +44,5 @@ function groupCreate(){
     });
 }
 
-});
-
+}
+);

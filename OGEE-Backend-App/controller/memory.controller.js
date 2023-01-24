@@ -4,8 +4,8 @@ const UserModel = require('../model/user.model');
 const addMemory = async (req, res) => {
     try {
         
-        const { image, groupId, description } = req.body;
-        const group = await GroupModel.findById(groupId);
+        const { image, groupname, description } = req.body;
+        const group = await GroupModel.findOne({groupname: req.body.name});
         if (!group) {
             return res.status(400).json({ message: 'Group not found' });
         }
@@ -31,11 +31,11 @@ const addMemory = async (req, res) => {
 const createPersonalMemory = async (req, res) => {
     try {
         const { image, description } = req.body;
-        const user = await UserModel.findOne({username: req.body.username});
+        const user = await UserModel.findOne({user: req.body.username});
         if (!user) {
             return res.status(400).json({ message: 'User not found' });
         }
-        const memory = await MemoryModel.create({ image, description, username: req.body.username });
+        const memory = await MemoryModel.create({ image, description, user: req.body.username });
         user.personalMemories.push(memory._id);
         await user.save();
         return res.json({ message: 'Personal memory created successfully', memory });
