@@ -169,7 +169,7 @@ $('#createMemoryBtn').click(function (event) {
         },
         error: function (ob, textStatus, error) {
             console.log("Error: " + error);
-            alert("An error occurred while creating the Post. Please try again later.");
+
         }
     });
     }

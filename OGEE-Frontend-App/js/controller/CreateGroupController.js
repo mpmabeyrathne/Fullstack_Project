@@ -39,7 +39,7 @@ function groupCreate(){
         },
         error: function (ob, textStatus, error) {
             console.log("Error: " + error);
-            alert("An error occurred while creating the group. Please try again later.");
+
         },
     });
 }
