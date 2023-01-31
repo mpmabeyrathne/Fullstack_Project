@@ -1,3 +1,7 @@
+$(function() {
+    loginUserSetName();
+})
+
 const emailRegex = new RegExp("^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$");
 const passwordRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 
@@ -57,7 +61,6 @@ $('#btnSignUp').click(function () {
 
 });
 $('#btnLogin').click(function () {
-
 
     let userEmail = $('#loginEmail').val();
     let userPassword = $('#loginPassword').val();
@@ -143,16 +146,31 @@ function userLogin() {
             async: true,
             dataType: 'json',
             success: function (res) {
-                if (res.message === 'User Password Incorrect!'){ 
+                if (res.message === 'User Password Incorrect!'){
                     alert(res.message);
-                    
                 }else{
                     alert(res.message);
+                    loginUserSetName();
                     window.location.href = '../../OGEE-Frontend-App/common/OGEE.html'
-                    
                 }
             },
         });
     } catch (err) {
+    }
+}
+
+function loginUserSetName(){
+    try{
+        fetch('../temp/user-login-logs.txt')
+            .then(response => response.text())
+            .then(text => {
+                if (text === null){
+
+                }else {
+                    $("#LOGIN_USERNAME").html(text);
+                }
+            });
+    }catch (err){
+        console.log("error " + err.toString());
     }
 }

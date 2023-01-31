@@ -36,6 +36,18 @@ const getAllUsers = async (req, res) => {
     }
 };
 
+const LoginUserNameTemp = (LOGIN_USERNAME) => {
+    try {
+        const fsLibrary  = require('fs')
+
+        fsLibrary.writeFile('../OGEE-Frontend-App/temp/user-login-logs.txt', LOGIN_USERNAME, (error) => {
+            if (error) throw error;
+        });
+    }catch (err){
+        console.log(err)
+    }
+}
+
 const getLogin = async (req, res) => {
     try {
         const email = req.params['email'];
@@ -45,11 +57,13 @@ const getLogin = async (req, res) => {
         
         if (data !== null) {
             const passwordValue = data.password;
+            LoginUserNameTemp(data.username);
+            console.log("LOGIN USER IS : " + data.username);
             if (passwordValue === password) {
                 return res.status(200).json({
-                    
+                    data: data.username,
                     message: 'User Login Success!'
-                })
+                });
             } else {
                 return res.json({
                     message: 'User Password Incorrect!'
@@ -63,5 +77,6 @@ const getLogin = async (req, res) => {
     } catch (err) {
     }
 }
+
 
 module.exports = {saveUser, getAllUsers, getLogin}
