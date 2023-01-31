@@ -2,12 +2,65 @@ let tempDescData = null;
 let tempDescData2 = null;
 let tempDescData3 = null;
 
+let groupName = null;
+let groupName2 = null;
+let groupName3 = null;
+let groupName4 = null;
+
+let groupDesc = null;
+let groupDesc2 = null;
+let groupDesc3 = null;
+let groupDesc4 = null;
+
+$('#GroupBtn').click(function () {
+
+    let group_name = $('#group-name');
+    let group_desc = $('#group-description');
+
+    if (group_name === null || group_name.length === 0){
+        alert("Please enter group name!");
+        $('#group_name').css({
+            'border': '2px solid red'
+        });
+    }else {
+        $('#group_name').css({
+            'border': '2px solid #0D6EFD '
+        });
+        if (group_desc === null || group_desc.length === 0){
+            alert("Please enter group desc!");
+            $('#group_desc').css({
+                'border': '2px solid red'
+            });
+        }else{
+            if (groupName === null){
+                $('#group_desc').css({
+                    'border': '2px solid #0D6EFD '
+                });
+
+                $("#GROUP_TITLE_3").html(group_name);
+                $("#GROUP_DESC_3").html(group_desc);
+
+                $('#group_content_3').css({
+                    'display': 'block'
+                });
+                alert("Group Created  Success!");
+
+                groupName = group_name;
+                groupDesc = group_desc;
+            }
+        }
+    }
+
+
+});
+
 $('#createMemoryBtn').click(function (event) {
     event.preventDefault();
 
+    CreatePost();
+
     let postDesc = $('#post-text').val();
     let postUserName = $('#postUserName').val();
-
 
     if (postDesc === null || postDesc.length === 0) {
         alert("Please enter post mind!");
@@ -76,50 +129,50 @@ $('#createMemoryBtn').click(function (event) {
         }
     }
 
-    // function CreatePost() {
+    function CreatePost() {
 
-    // trigger();
 
-    // let file = event.target.value;
-    //
+    let file = event.target.value;
 
-    // let postImage = document.getElementById('post-image');
-    //
 
-    // postImage.innerHTML = file;
-    //
-    // let postDesc = $('#post-text').val();
-    // let postUserName = $('#postUserName').val();
+    let postImage = document.getElementById('post-image');
 
-    // alert(postImage.innerHTML)
 
-    // $.ajax({
-    //     method: "POST",
-    //     url: `http://localhost:8800/api/memories/p-memory`,
-    //     async: true,
-    //     contentType: "application/json",
-    //     data: JSON.stringify({
-    //         description: postDesc,
-    //         image: postImage,
-    //         user: postUserName
-    //     }),
-    //     beforeSend: function () {
-    //         console.log(JSON.stringify({ description: postDesc, image: postImage, user: postUserName }));
-    //     },
-    //     success: function (res) {
-    //         if (res.message === 'success') {
-    //             alert("Post created successfully!");
-    //         } else {
-    //             alert("Alert: " + res.message);
-    //
-    //         }
-    //
-    //     },
-    //     error: function (ob, textStatus, error) {
-    //         console.log("Error: " + error);
-    //         alert("An error occurred while creating the Post. Please try again later.");
-    //     }
-    // });
-    // }
+    postImage.innerHTML = file;
+
+    let postDesc = $('#post-text').val();
+    let postUserName = $('#postUserName').val();
+
+    alert(postImage.innerHTML)
+
+    $.ajax({
+        method: "POST",
+        url: `http://localhost:8800/api/memories/p-memory`,
+        async: true,
+        contentType: "application/json",
+        data: JSON.stringify({
+            description: postDesc,
+            image: postImage,
+            user: postUserName
+        }),
+        beforeSend: function () {
+            console.log(JSON.stringify({ description: postDesc, image: postImage, user: postUserName }));
+        },
+        success: function (res) {
+            if (res.message === 'success') {
+                alert("Post created successfully!");
+            } else {
+                alert("Alert: " + res.message);
+
+            }
+
+        },
+        error: function (ob, textStatus, error) {
+            console.log("Error: " + error);
+            alert("An error occurred while creating the Post. Please try again later.");
+        }
+    });
+    }
+
 });
 

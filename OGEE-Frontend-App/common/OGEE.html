@@ -135,10 +135,14 @@
                                 <label for="post-text">User Name</label>
                                 <input id="postUserName"></input>
                             </div>
-                            <div class="form-group">
+
+                            <div>
                                 <label for="post-image">Upload Image</label>
-                                <input type="file" id="post-image" accept="image/*">
+                                <input type="file" id="post-image" accept="post-image">
                             </div>
+
+                            <div id="preview"></div>
+
                             <button id="cancelBtn" class="btn btn-secondary">Cancel</button>
                             <button id="createMemoryBtn" type="button" class="btn btn-primary">Post</button>
                         </form>
@@ -179,26 +183,6 @@
                     <div class="feed-photo">
                         <img src="../assets/images/feed-1.jpg" alt=""/>
                     </div>
-                    <div class="action-btn">
-                        <div class="interct-btns">
-                            <span><i class="uil uil-heart-alt"></i></span>
-                            <span><i class="uil uil-comment-lines"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="like-info">
-                        <span><img src="../assets/images/profile-10.jpg" alt=""/></span>
-                        <span><img src="../assets/images/profile-11.jpg" alt=""/></span>
-                        <span><img src="../assets/images/profile-12.jpg" alt=""/></span>
-                        <p>liked by <b>Navodya asalage</b> and 6 others</p>
-                    </div>
-                    <div class="caption">
-                        <p>
-                            <b>Pasindu Maduwantha</b> My Mories.
-                            <span class="hash-tag">Friends</span>
-                        </p>
-                    </div>
-                    <div class="comments text-muted">View all 15 comments</div>
                 </div>
             </div>
 
@@ -234,26 +218,6 @@
 
                         </div>
                     </div>
-                    <div class="action-btn">
-                        <div class="interct-btns">
-                            <span><i class="uil uil-heart-alt"></i></span>
-                            <span><i class="uil uil-comment-lines"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="like-info">
-                        <span><img src="../assets/images/profile-10.jpg" alt=""/></span>
-                        <span><img src="../assets/images/profile-11.jpg" alt=""/></span>
-                        <span><img src="../assets/images/profile-12.jpg" alt=""/></span>
-                        <p>liked by <b>Navodya asalage</b> and 6 others</p>
-                    </div>
-                    <div class="caption">
-                        <p>
-                            <b>Pasindu Maduwantha</b> My Mories.
-                            <span class="hash-tag">Friends</span>
-                        </p>
-                    </div>
-                    <div class="comments text-muted">View all 15 comments</div>
                 </div>
             </div>
 
@@ -289,26 +253,6 @@
 
                         </div>
                     </div>
-                    <div class="action-btn">
-                        <div class="interct-btns">
-                            <span><i class="uil uil-heart-alt"></i></span>
-                            <span><i class="uil uil-comment-lines"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="like-info">
-                        <span><img src="../assets/images/profile-10.jpg" alt=""/></span>
-                        <span><img src="../assets/images/profile-11.jpg" alt=""/></span>
-                        <span><img src="../assets/images/profile-12.jpg" alt=""/></span>
-                        <p>liked by <b>Navodya asalage</b> and 6 others</p>
-                    </div>
-                    <div class="caption">
-                        <p>
-                            <b>Pasindu Maduwantha</b> My Mories.
-                            <span class="hash-tag">Friends</span>
-                        </p>
-                    </div>
-                    <div class="comments text-muted">View all 15 comments</div>
                 </div>
             </div>
 
@@ -366,8 +310,6 @@
                     <div class="comments text-muted">View all 15 comments</div>
                 </div>
             </div>
-
-
 
 
         </div>
@@ -436,7 +378,22 @@
                         </div>
                         <Label class="add-post" id="addPostbtn">+</Label>
                     </div>
+
+                    <!-- group 3 ---------------------------------------->
+                    <div class="group" id="group_content_3" style="display:none;">
+                        <div class="profile-pic">
+                            <img src="../assets/images/profile-14.jpg" alt=""/>
+                        </div>
+                        <div class="group-name">
+                            <h5 class="group-title" id="GROUP_TITLE_3">gg</h5>
+                            <p class="text-muted" id="GROUP_DESC_3">hhh</p>
+                        </div>
+                        <Label class="add-post">+</Label>
+                    </div>
+
+
                 </div>
+
             </div>
         </div>
         <!-------- Created Group ------------->

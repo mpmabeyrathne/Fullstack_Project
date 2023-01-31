@@ -1,6 +1,10 @@
-$(function() {
+// $(function() {
+//     loginUserSetName();
+// })
+
+$(document).ready(function () {
     loginUserSetName();
-})
+});
 
 const emailRegex = new RegExp("^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$");
 const passwordRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
@@ -123,9 +127,9 @@ function userRegister() {
             password: signUpPassword
         }),
         success: function (res) {
-            if (res.message === 'Already Register User! Please login'){
+            if (res.message === 'Already Register User! Please login') {
                 alert(res.message);
-            }else{
+            } else {
                 alert(res.message);
                 window.location.href = '../../OGEE-Frontend-App/common/OGEE.html'
             }
@@ -146,9 +150,9 @@ function userLogin() {
             async: true,
             dataType: 'json',
             success: function (res) {
-                if (res.message === 'User Password Incorrect!'){
+                if (res.message === 'User Password Incorrect!') {
                     alert(res.message);
-                }else{
+                } else {
                     alert(res.message);
                     loginUserSetName();
                     window.location.href = '../../OGEE-Frontend-App/common/OGEE.html'
@@ -159,18 +163,18 @@ function userLogin() {
     }
 }
 
-function loginUserSetName(){
-    try{
+function loginUserSetName() {
+    try {
         fetch('../temp/user-login-logs.txt')
             .then(response => response.text())
             .then(text => {
-                if (text === null){
+                if (text === null) {
 
-                }else {
+                } else {
                     $("#LOGIN_USERNAME").html(text);
                 }
             });
-    }catch (err){
+    } catch (err) {
         console.log("error " + err.toString());
     }
 }
