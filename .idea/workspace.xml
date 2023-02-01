@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0e83203-6a10-4a57-b40f-db64d2dac338" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OGEE-Backend-App/test/test/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/OGEE-Backend-App/test/test/signin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OGEE-Backend-App/test/test/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/OGEE-Backend-App/test/test/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
       <updated>1675186191702</updated>
       <workItem from="1675186193015" duration="378000" />
       <workItem from="1675188223791" duration="15000" />
-      <workItem from="1675250574926" duration="564000" />
+      <workItem from="1675250574926" duration="743000" />
     </task>
     <servers />
   </component>

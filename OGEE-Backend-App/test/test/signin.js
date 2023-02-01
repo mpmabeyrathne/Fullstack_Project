@@ -3,7 +3,7 @@ const assert = require("assert");
 const mocha = require("mocha");
 
 describe("Test Login Form", function() {
-    this.timeout($0000);
+    this.timeout(40000);
     it("Should Login a User", function(done) {
        
         const driver = new Builder().forBrowser("chrome").build();
